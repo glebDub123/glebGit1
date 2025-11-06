@@ -10,11 +10,13 @@ switch ($choice) {
         inputNumbers();
         break;
     case '2':
+        addition();
         break;
     case '3':
         subtract();
         break;
     case '4':
+        divide();
         break;
     case '5':
         break;
@@ -32,8 +34,26 @@ function displayMenu() {
     echo "Выберите пункт меню: ";
 }
 
-function subtract(){
+function divide(){
+    if ($num1 == null && $num2 == null && $num !=2) {
+        echo "Введите правильные числа (пункт 1)\n";
+        return;
+    }
+    $result = $num1 / $num2;
+    echo "Результат деления: {$num1} / {$num2} = {$result}\n";
+}
+
+function addition(){
     if ($num1 == null && $num2 == null) {
+        echo "Сначала введите числа (пункт 1)\n";
+        return;
+    }
+    $result = $num1 + $num2;
+    echo "Результат сложения: {$num1} + {$num2} = {$result}\n";
+}
+
+function subtract(){
+  if ($num1 == null && $num2 == null) {
         echo "Сначала введите числа (пункт 1)\n";
         return;
     }
