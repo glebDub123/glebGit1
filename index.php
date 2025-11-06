@@ -19,6 +19,7 @@ switch ($choice) {
         divide();
         break;
     case '5':
+        exponentiation();
         break;
     default:
         echo "Неверный выбор. Попробуйте снова.\n";
@@ -33,6 +34,15 @@ function displayMenu() {
     echo "5. Возвести число в степень\n";
     echo "Выберите пункт меню: ";
 }   
+
+function exponentiation(){
+    if ($num1 == 0 && $num2 == 0) {
+        echo "Сначала введите числа (пункт 1)\n";
+        return;
+    }
+    $result = pow($num1, $num2);
+    echo "Результат возведения в степень: {$num1} ^ {$num2} = {$result}\n";
+}
 
 function inputNumbers(){
     echo "Введите первое число: ";
