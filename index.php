@@ -12,6 +12,7 @@ switch ($choice) {
     case '2':
         break;
     case '3':
+        subtract();
         break;
     case '4':
         break;
@@ -29,5 +30,14 @@ function displayMenu() {
     echo "4. Выполнить деление\n";
     echo "5. Возвести число в степень\n";
     echo "Выберите пункт меню: ";
-}   
+}
+
+function subtract(){
+    if ($num1 == null && $num2 == null) {
+        echo "Сначала введите числа (пункт 1)\n";
+        return;
+    }
+    $result = $num1 - $num2;
+    echo "Результат вычитания: {$num1} + {$num2} = {$result}\n";
+}
 ?>
