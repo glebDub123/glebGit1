@@ -30,4 +30,11 @@ function displayMenu() {
     echo "5. Возвести число в степень\n";
     echo "Выберите пункт меню: ";
 }   
+
+function inputNumbers(){
+    echo "Введите первое число: ";
+    $num1 = (float)readline();
+    echo "Введите второе число: ";
+    $num2 = (float)readline();
+}
 ?>
